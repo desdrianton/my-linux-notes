@@ -1,0 +1,73 @@
+============================================================ Enable WiFi
+- ip a 																						=> Untuk melihat nama device wifi kita => Contoh wlp61s0
+- sudo wpa_passphrase FioNet bismillah >> /etc/wpa_supplicant/wpa_supplicant.conf
+- wpa_supplicant -i wlp61s0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+- ping 192.168.0.1																			=> Test ping
+- ping www.google.com																		=> Test ping
+- ln -s /etc/sv/wpa_supplicant /var/service/
+- reboot
+- ping www.google.com																		=> Test ping
+
+
+
+====================================================== Update Void Linux
+- xbps-install -Su
+- xbps-install -u xbps
+- xbps-install void-repo-nonfree
+- xbps-install -Su
+
+
+
+============================ Install Essensial package for setup process
+- sudo xbps-install htop git xorg i3-gaps lightdm geany pcmanfm alacritty chromium
+
+
+
+================================================================= Github
+- ssh-keygen -t ed25519 -C "desdrianton@gmail.com"
+- copy kan isi dari ~/.ssh/ ke github
+- git clone https://github.com/desdrianton/linux-dot-config.git /home/anton/.config.git
+- cd ~/.config
+- ln -s /home/anton/.config.git/i3 .
+- ln -s /home/anton/.config.git/htop .
+- ln -s /home/anton/.config.git/alacritty .
+- ln -s /home/anton/.config.git/pcmanfm .
+- ln -s /home/anton/.config.git/htop .
+
+
+
+========================================================= Install Others
+- xbps-install i3lock lightdm-gtk-greeter neofetch nitrogen lxappearance arc-theme arc-icon-theme breeze-snow-cursor-theme rofi noto-fonts-ttf xf86-input-synaptics xf86-video-intel dbus dunst dmenu wpa-cute alsa-utils xorg-fonts evince ffmpeg file-roller scrot lightdm-gtk-greeter-settings cheese libreoffice grub-customizer ntfs-3g flameshot nano
+
+
+
+========================================================= Ricing (theme)
+- lxappearance
+	- Pilih theme
+	- Pilih icon
+	- Pilih cursor
+
+- geany
+	- Pilih theme
+	- line height => 2;2
+
+- Wallpaper
+	- Pilih wallpaper dgn nitrogen
+	- Ketika next restart, nitrogen akan di load ulang oleh script di git
+
+- pcmanfm
+	- sudo xbps-install xdg-utils xdg-user-dirs
+	- xdg-user-dirs-update
+
+==================================================== Other configuration 
+- Hardware clock as localtime ###
+	- Add HARDWARECLOCK=localtime to /etc/rc.conf
+
+- dbus
+	- sudo ln -s /etc/sv/dbus /var/service
+
+
+########################################################################
+# Reff                                                                 #
+########################################################################
+- https://github.com/addy-dclxvi/void-bspwm-dotfiles

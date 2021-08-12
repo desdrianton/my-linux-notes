@@ -1,0 +1,16 @@
+================================================================ Prepare
+- xbps-install void-repo-nonfree
+
+============================================================ Web Browser
+- xbps-install opera firefox
+
+============================================================ Development
+- xbps-install openjdk11 intellij-idea-community-edition dbeaver vscode 
+
+
+## Not from xbps
+- Zoom
+- Android Studio
+- postman
+- fvm (flutter) 
+- Flutter
