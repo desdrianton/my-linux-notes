@@ -175,6 +175,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # dunst
 exec --no-startup-id dunst
 
+# Reverse scrolling (natural scroll) for touchpad (T480s)
+exec --no-startup-id synclient VertScrollDelta=-71
 
 
 # ==================================================================== #

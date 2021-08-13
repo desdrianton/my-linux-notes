@@ -1,19 +1,20 @@
 ## ========================================================= ON PROGRESS
-- Polybar
+- Polkit
+
 
 ## ======================================================= TODO (Prio 1)
-- Mouse
-	- Arah scroll on touchpad
-	- Tap on touchpad as click
-- Polkit
 - Bluetooth
 - Rapikan catatan
+
+
 
 ## ======================================================= TODO (Prio 2)
 - dunst ricing
 - Dark theme untuk firefox
 - Cursor theme
 - Close lid mengunci dgn passwd
+
+
 
 ## ================================================================ DONE
 - Clock (local)
@@ -22,3 +23,5 @@
 - Sound shortcut
 - picom
 - i3 => Menu untuk keluar dari i3
+- Polybar
+- Mouse	=> Arah scroll on touchpad
