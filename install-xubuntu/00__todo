@@ -1,9 +1,11 @@
 ## ========================================================= ON PROGRESS
-- Polkit
+- Hardware acceleration for Chromium
+
 
 
 ## ======================================================= TODO (Prio 1)
 - Bluetooth
+- Polkit
 - Rapikan catatan
 
 
@@ -16,6 +18,7 @@
 
 
 
+
 ## ================================================================ DONE
 - Clock (local)
 - Backlight
@@ -25,3 +28,4 @@
 - i3 => Menu untuk keluar dari i3
 - Polybar
 - Mouse	=> Arah scroll on touchpad
+- Polybar ricing
