@@ -7,8 +7,8 @@ set $mod Mod4
 
 workspace_layout tabbed
 new_window pixel 3
-gaps inner 8
-gaps outer 4
+gaps inner 20
+gaps outer 5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -108,7 +108,7 @@ bindsym $mod+a focus parent
 # ==================================================================== #
 
 # App shortcuts
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+e exec /usr/bin/pcmanfm
 bindsym Print exec "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
@@ -124,11 +124,17 @@ bindsym XF86MonBrightnessDown exec xbacklight -10
 bindsym $mod+XF86MonBrightnessUp exec xbacklight -set 100%
 bindsym $mod+XF86MonBrightnessDown exec xbacklight -set 1%
 
-# Multimedia Keys
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec amixer set Master toggle && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMicMute exec amixer set Capture toggle && pkill -RTMIN+1 i3blocks
+# Multimedia Keys (working with void linux)
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
+#bindsym XF86AudioMute exec exec amixer -q set Master toggle
+#bindsym XF86AudioMicMute exec amixer set Capture toggle
+
+# Multimedia Keys (working with Xubuntu-i3wm)
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle
 
 # rofi bindings fancy application menu
 bindsym $mod+Escape exec rofi -modi drun -show drun -display-drun "Apps : " -line-padding 4 \
