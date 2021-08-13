@@ -35,6 +35,8 @@
 - lightdm-gtk-greeter-settings
 	- Ubah theme => arc-dark
 
+
+
 ================================================================= Config
 - timedatectl set-local-rtc 1
 
@@ -55,9 +57,11 @@
 	display-setup-script=xrandr --output eDP1 --mode 1920x1080
 
 
+
 ================================================================ Polybar
 - sudo apt install build-essential
 - sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python3-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev python3-sphink libxcb-composite0-dev libjsoncpp-dev
 - git clone https://github.com/jaagr/polybar.git
 - cd polybar && ./build.sh
+
 
