@@ -32,7 +32,8 @@
 	- Pilih wallpaper dgn nitrogen
 	- Ketika next restart, nitrogen akan di load ulang oleh script di git
 
-
+- lightdm-gtk-greeter-settings
+	- Ubah theme => arc-dark
 
 ================================================================= Config
 - timedatectl set-local-rtc 1
@@ -41,11 +42,22 @@
 	- Remove item non OS
 	- Ubah display menjadi 1024x768x8 => krn grub ada bug ketika menggunakan high resolution (FHD)
 
-- Agar backlight bisa diubah dgn cli xbacklight
+- Agar backlight bisa diubah dgn cli xbacklight => Reff: https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder
 	- Buat atau edit file /etc/X11/xorg.conf
 		Section "Device"
 			Identifier  "Intel Graphics" 
 			Driver      "intel"
 			Option      "Backlight"  "intel_backlight"
 		EndSection
+
+- Edit /etc/lightdm/lightdm.conf, tambahkan:
+	[SeatDefaults]
+	display-setup-script=xrandr --output eDP1 --mode 1920x1080
+
+
+================================================================ Polybar
+- sudo apt install build-essential
+- sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python3-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev python3-sphink libxcb-composite0-dev libjsoncpp-dev
+- git clone https://github.com/jaagr/polybar.git
+- cd polybar && ./build.sh
 

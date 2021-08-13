@@ -7,7 +7,7 @@ set $mod Mod4
 
 workspace_layout tabbed
 new_window pixel 3
-gaps inner 20
+gaps inner 10
 gaps outer 5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -113,6 +113,7 @@ bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+e exec /usr/bin/pcmanfm
 bindsym Print exec "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+Print exec flameshot
+bindsym $mod+F12 exec ~/.config/i3/scripts/mydmenu_exit.sh
 
 # Lock the system
 bindsym $mod+l exec i3lock --color 000000
@@ -144,7 +145,6 @@ bindsym $mod+Escape exec rofi -modi drun -show drun -display-drun "Apps : " -lin
 bindsym $mod+Tab exec rofi -show window -display-window "Window : " -line-padding 4 \
                 -lines 10 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11"
-
 
 
 # ==================================================================== #
