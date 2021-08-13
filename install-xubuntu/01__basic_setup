@@ -17,6 +17,8 @@
 
 - sudo apt install geany pcmanfm lxappearance arc-theme arc-icon papirus-icon-theme theme rofi nitrogen neofetch scrot flameshot grub-customizer dunst
 
+
+
 ========================================================= Ricing (theme)
 - lxappearance
 	- Pilih theme
@@ -31,4 +33,19 @@
 	- Ketika next restart, nitrogen akan di load ulang oleh script di git
 
 
+
+================================================================= Config
 - timedatectl set-local-rtc 1
+
+- grub-customizer
+	- Remove item non OS
+	- Ubah display menjadi 1024x768x8 => krn grub ada bug ketika menggunakan high resolution (FHD)
+
+- Agar backlight bisa diubah dgn cli xbacklight
+	- Buat atau edit file /etc/X11/xorg.conf
+		Section "Device"
+			Identifier  "Intel Graphics" 
+			Driver      "intel"
+			Option      "Backlight"  "intel_backlight"
+		EndSection
+

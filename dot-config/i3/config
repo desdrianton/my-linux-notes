@@ -51,11 +51,11 @@ bindsym $mod+Shift+0    move container to workspace  $ws10
 
 # resize window (you can also use the mouse for that):
 mode "resize" {
-	bindsym w resize grow width 5px or 5 ppt
-	bindsym Shift+w resize shrink width 5px or 5 ppt
+	bindsym w resize grow width 1px or 1 ppt
+	bindsym Shift+w resize shrink width 1px or 1 ppt
 
-	bindsym h resize grow height 5px or 5 ppt
-	bindsym Shift+h resize shrink height 5px or 5 ppt
+	bindsym h resize grow height 1px or 1 ppt
+	bindsym Shift+h resize shrink height 1px or 1 ppt
 
 	bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -114,7 +114,6 @@ bindsym $mod+e exec /usr/bin/pcmanfm
 bindsym Print exec "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+Print exec flameshot
 
-
 # Lock the system
 bindsym $mod+l exec i3lock --color 000000
 
@@ -170,7 +169,11 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 # Desktop notifications
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
+# Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# dunst
+exec --no-startup-id dunst
 
 
 
