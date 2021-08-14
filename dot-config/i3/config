@@ -109,10 +109,10 @@ bindsym $mod+a focus parent
 
 # App shortcuts
 bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+w exec /usr/bin/firefox
-bindsym $mod+e exec /usr/bin/pcmanfm
+bindsym $mod+w exec chromium
+bindsym $mod+e exec pcmanfm
 bindsym Print exec "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
-bindsym $mod+Print exec flameshot
+bindsym $mod+Print exec --no-startup-id flameshot gui
 bindsym $mod+F12 exec ~/.config/i3/scripts/mydmenu_exit.sh
 
 # Lock the system
@@ -175,8 +175,11 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # dunst
 exec --no-startup-id dunst
 
-# Reverse scrolling (natural scroll) for touchpad (T480s)
+# Touchpad setting (T480s)
 exec --no-startup-id synclient VertScrollDelta=-71
+exec --no-startup-id synclient HorizTwoFingerScroll=1
+exec --no-startup-id synclient HorizScrollDelta=-71
+
 
 
 # ==================================================================== #
