@@ -1,9 +1,64 @@
 ========================================================================
-sudo snap install opera
+= Web Browser
+========================================================================
+Chromium
+- sudo snap install chromium
 
-zoom
-whatsapp
-telegram
-discord
+
+Opera
+- sudo snap install opera
+
+
+Tor
+- sudo apt install tor torbrowser-launcher
+
+
+Firefox
+- Already installed with Xubuntu
+
+
+
+========================================================================
+= Communication
+========================================================================
+Discord
+- sudo snap install discord
+
+
+Zoom
+- sudo snap install zoom-client
+
+
+Telegram
+- sudo apt install telegram-desktop
+
+
+Signal
+- wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+- cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+- echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+- sudo apt update
+- sudo apt install signal-desktop
+
+
+
+========================================================================
+= Office
+========================================================================
+Microsoft Fonts
+- sudo apt update && sudo apt install ttf-mscorefonts-installer
+
+
+WPS Office
+- Download .deb from linux.wps.com
+- sudo dpkg -i <nama_file_hasil_download>
+
+
+
+========================================================================
+= WinApps                                                !!! NOT YET !!!
+========================================================================
+- WinApps => Office 2016
+- WinApps => Evernote
 
 

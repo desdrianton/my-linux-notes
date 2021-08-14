@@ -1,25 +1,33 @@
 ========================================================================
-REff: https://help.ubuntu.com/community/KVM/Installation
-
+= Qemu
+========================================================================
 - sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
 - sudo adduser `id -un` libvirt
 - sudo adduser `id -un` kvm
 
+REff: https://help.ubuntu.com/community/KVM/Installation
 
 
-======================================================== Java & Intellij
+
+========================================================================
+= Java & Intellij
+========================================================================
 - sudo apt install openjdk-11-jdk 
 - sudo snap install intellij-idea-community --classic
 
 
 
-========================================================= Android Studio
+========================================================================
+= Android Studio
+========================================================================
 - sudo snap install android-studio --classic
 - Android SDK Command-line tools from Android SDK Manager (Tools -> SDK Manager -> Appearance & Behaviour -> System Setting -> Android SDK -> SDK Tools -> Android SDK Command Line Tools -> Aplly)
 
 
  
-================================================================ Flutter
+========================================================================
+= Flutter
+========================================================================
 Install Flutter
 - sudo snap install flutter --classic
 - flutter doctor
@@ -28,6 +36,7 @@ Install Flutter
 - edit ~/.bashrc
 	- Tambahkan: CHROME_EXECUTABLE=/snap/bin/chromium; export CHROME_EXECUTABLE
 - flutter doctor
+
 
 Install Flutter plguin on Android Studio
 - File > Settings > Plugins -> Marketplace
@@ -43,17 +52,48 @@ Install FVM dan flutter versi sebelumnya
 
 
 
-=============================================== Development Tools / Apps
-sudo snap install dbeaver-ce
-sudo snap install postman
-sudo snap install code --classic
+========================================================================
+= Development Tools
+========================================================================
+DBeaver
+- sudo snap install dbeaver-ce
+
+
+Postman
+- sudo snap install postman
+
+
+VS Code
+- sudo snap install code --classic
+
 
 PHP
+- sudo apt install openssl php php-common php-curl php-json php-mbstring php-mysql php-xml php-zip
+- php --version
+
+
 MariaDB
+- sudo apt install mariadb-server
+- sudo mysql_secure_installation
+- sudo mariadb -u root -p 
+	- GRANT ALL ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root' WITH GRANT OPTION;
+	- GRANT ALL ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION;
+	- FLUSH PRIVILEGES;
+- sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+	- Comment baris bind-address  = 127.0.0.1
+- systemctl restart mariadb
+- Test dari client, apakah sudah bisa diakses
+
+
 StarUML
+- Download deb file from https://staruml.io/
+- sudo dpkg -i StarUML_4.0.1_amd64.deb
 
 
-================================================== Setup github & gitlab
+
+========================================================================
+= Setup github & gitlab
+========================================================================
 - ssh-keygen -t ed25519 -C "desdrianton@gmail.com"
 - Masukkan ke github
 - Masukkan ke gitlab
