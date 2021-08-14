@@ -1,0 +1,9 @@
+========================================================================
+sudo snap install opera
+
+zoom
+whatsapp
+telegram
+discord
+
+

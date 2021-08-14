@@ -1,0 +1,59 @@
+========================================================================
+REff: https://help.ubuntu.com/community/KVM/Installation
+
+- sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+- sudo adduser `id -un` libvirt
+- sudo adduser `id -un` kvm
+
+
+
+======================================================== Java & Intellij
+- sudo apt install openjdk-11-jdk 
+- sudo snap install intellij-idea-community --classic
+
+
+
+========================================================= Android Studio
+- sudo snap install android-studio --classic
+- Android SDK Command-line tools from Android SDK Manager (Tools -> SDK Manager -> Appearance & Behaviour -> System Setting -> Android SDK -> SDK Tools -> Android SDK Command Line Tools -> Aplly)
+
+
+ 
+================================================================ Flutter
+Install Flutter
+- sudo snap install flutter --classic
+- flutter doctor
+- flutter config --android-sdk /home/anton/00__ME__________/20__DEV/10__TOOLS/Android/Sdk
+- flutter doctor --android-licenses
+- edit ~/.bashrc
+	- Tambahkan: CHROME_EXECUTABLE=/snap/bin/chromium; export CHROME_EXECUTABLE
+- flutter doctor
+
+Install Flutter plguin on Android Studio
+- File > Settings > Plugins -> Marketplace
+- Pilih flutter plugin
+
+
+Install FVM dan flutter versi sebelumnya
+- dart pub global activate fvm
+- edit ~/.bashrc
+	- Tambahkan: export PATH="$PATH":"$HOME/.pub-cache/bin"
+- fvm install 2.0.6
+- fvm install 1.22.6
+
+
+
+=============================================== Development Tools / Apps
+sudo snap install dbeaver-ce
+sudo snap install postman
+sudo snap install code --classic
+
+PHP
+MariaDB
+StarUML
+
+
+================================================== Setup github & gitlab
+- ssh-keygen -t ed25519 -C "desdrianton@gmail.com"
+
+

@@ -119,8 +119,8 @@ bindsym $mod+F12 exec ~/.config/i3/scripts/mydmenu_exit.sh
 bindsym $mod+l exec i3lock --color 000000
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec xbacklight +10
-bindsym XF86MonBrightnessDown exec xbacklight -10
+bindsym XF86MonBrightnessUp exec xbacklight +5
+bindsym XF86MonBrightnessDown exec xbacklight -5
 bindsym $mod+XF86MonBrightnessUp exec xbacklight -set 100%
 bindsym $mod+XF86MonBrightnessDown exec xbacklight -set 1%
 

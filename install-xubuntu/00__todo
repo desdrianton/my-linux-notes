@@ -1,9 +1,10 @@
 ## ========================================================= ON PROGRESS
-- Hardware acceleration for Chromium
+
 
 
 
 ## ======================================================= TODO (Prio 1)
+- Hardware acceleration for Chromium
 - Bluetooth
 - Polkit
 - Rapikan catatan
@@ -15,7 +16,8 @@
 - Dark theme untuk firefox
 - Cursor theme
 - Close lid mengunci dgn passwd
-
+- Multi monitor setup
+- Test zoom
 
 
 
