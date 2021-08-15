@@ -6,9 +6,9 @@ font pango:Noto Sans Regular 9
 set $mod Mod4
 
 workspace_layout tabbed
-new_window pixel 2
-gaps inner 4
-gaps outer 2
+new_window pixel 1
+gaps inner 0
+gaps outer 0
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -217,14 +217,16 @@ set $darkgrey		#383c4a
 set $grey			#b0b5bd
 set $mediumgrey		#8b8b8b
 set $yellowbrown	#e1b700
+set $polybarBg		#2f2f2f
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    $lightblue	$darkblue	$white		$purple		$white
-client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
-client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
-client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
+client.focused		    $polybarBg	$polybarBg	$white		$polybarBg		$white
+client.unfocused	    $polybarBg	$polybarBg	$polybarBg	$polybarBg		$polybarBg
+client.focused_inactive	$darkblue	$polybarBg	$grey		$polybarBg		$polybarBg
+client.urgent		    $urgentred	$urgentred	$white		$polybarBg		$polybarBg
 
+hide_edge_borders smart
 
 
 # ==================================================================== #
