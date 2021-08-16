@@ -105,7 +105,6 @@ bindsym $mod+Tab focus right
 bindsym $mod+Shift+Tab focus left
 
 
-
 # ==================================================================== #
 # RUN APPS 															   #
 # ==================================================================== #
@@ -117,6 +116,8 @@ bindsym $mod+e exec pcmanfm
 bindsym Print exec "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+Print exec --no-startup-id flameshot gui
 bindsym $mod+F12 exec ~/.config/i3/scripts/mydmenu_exit.sh
+bindsym $mod+F10 exec ~/.config/polybar/launch.sh
+bindsym $mod+shift+F10 exec "killall -q polybar"
 
 # Lock the system
 bindsym $mod+l exec i3lock --color 000000
@@ -173,7 +174,7 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # dunst
 exec --no-startup-id dunst
