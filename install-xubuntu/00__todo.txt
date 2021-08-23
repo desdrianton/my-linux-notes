@@ -15,7 +15,6 @@
 - Cursor theme
 - Close lid mengunci dgn passwd
 - Multi monitor setup
-- Test zoom
 
 
 
@@ -30,5 +29,7 @@
 - Mouse	=> Arah scroll on touchpad
 - Polybar ricing
 - Rapikan catatan
+- Google Drive
+- Test zoom
 
 
