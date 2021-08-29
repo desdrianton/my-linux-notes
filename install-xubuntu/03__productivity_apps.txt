@@ -1,16 +1,29 @@
 ========================================================================
 = Web Browser
 ========================================================================
-Chromium
+Chromium (snap)
 - sudo snap install chromium
 
 
-Opera
+
+Chromium (Non snap)
+- ???
+
+
+
+Opera (snap)
 - sudo snap install opera
 
 
-Tor
+
+Opera (Non snap)
+- ???
+
+
+
+Tor (Non snap)
 - sudo apt install tor torbrowser-launcher
+
 
 
 Firefox
@@ -18,22 +31,47 @@ Firefox
 
 
 
+Brave (Non snap)
+- sudo apt install apt-transport-https curl
+- sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+- echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+- sudo apt update
+- sudo apt install brave-browsers
+
+
+
 ========================================================================
 = Communication
 ========================================================================
-Discord
+Discord (snap)
 - sudo snap install discord
 
 
-Zoom
+
+Discord (Non snap)
+- sudo apt install gdebi-core wget
+- wget -O ~/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
+- sudo gdebi ~/discord.deb 
+
+
+
+Zoom (snap)
 - sudo snap install zoom-client
 
 
-Telegram
+
+Zoom (Non snap)
+- Download from https://zoom.us/download?os=linux
+- sudo apt install ./zoom_amd64.deb
+
+
+
+Telegram (Non snap)
 - sudo apt install telegram-desktop
 
 
-Signal
+
+Signal (Non snap)
 - wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 - cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
 - echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
@@ -59,6 +97,12 @@ WPS Office
 = Google Drive
 ========================================================================
 Reff: https://www.linuxuprising.com/2018/07/mounting-google-drive-on-xfce-or-mate.html?m=1
+- sudo add-apt-repository ppa:alessandro-strada/ppa
+- sudo apt update
+- sudo apt install google-drive-ocamlfuse
+- google-drive-ocamlfuse
+	=> Allow ocamlfuse to access gmail (browser)
+- google-drive-ocamlfuse ~/00__ME__________/10__CLOUD/gdrive_desdrianton/
 
 
 
