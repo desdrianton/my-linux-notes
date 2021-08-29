@@ -69,7 +69,9 @@ lxappearance
 	
 Geany
 - Pilih theme
-- line height => 2;2
+- Edit filetypes.common (Tools -> Configuration Fils)
+	[styling]
+	line height => 2;2
 
 
 Wallpaper
