@@ -32,7 +32,7 @@
 ========================================================================
 = Apps & Tools for basic working linux environment
 ========================================================================
-- sudo apt install geany pcmanfm lxappearance arc-theme arc-icon papirus-icon-theme theme rofi nitrogen neofetch scrot flameshot grub-customizer dunst glances
+- sudo apt install geany pcmanfm lxappearance arc-theme papirus-icon-theme rofi nitrogen neofetch scrot flameshot grub-customizer dunst glances picom xbacklight
 
 
 
