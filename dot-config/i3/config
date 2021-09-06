@@ -113,7 +113,7 @@ bindsym $mod+Shift+Tab focus left
 bindsym $mod+F1 exec mate-calc
 bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+w exec chromium
-bindsym $mod+e exec pcmanfm
+bindsym $mod+e exec thunar
 bindsym Print exec "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+Print exec --no-startup-id flameshot gui
 bindsym $mod+F12 exec ~/.config/i3/scripts/mydmenu_exit.sh
