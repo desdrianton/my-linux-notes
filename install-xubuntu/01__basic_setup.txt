@@ -105,3 +105,4 @@ Rofi
 Reff: https://www.linuxuprising.com/2020/12/remap-keyboard-and-mouse-buttons-on.html
 
 Mapping a key left to Backspace become backspace button. so now we have 2 key for backspace
+Mapping space
