@@ -47,9 +47,21 @@ Install FVM dan flutter versi sebelumnya
 - dart pub global activate fvm
 - edit ~/.bashrc
 	- Tambahkan: export PATH="$PATH":"$HOME/.pub-cache/bin"
+- fvm install 2.2.1
+	- fvm use 2.2.1
+	- fvm doctor
+	- flutter config --android-sdk /home/anton/00__ME__________/20__DEV/10__TOOLS/Android/Sdk
+	- flutter doctor --android-licenses
 - fvm install 2.0.6
+	- fvm use 2.0.6
+	- fvm doctor
+	- flutter config --android-sdk /home/anton/00__ME__________/20__DEV/10__TOOLS/Android/Sdk
+	- flutter doctor --android-licenses
 - fvm install 1.22.6
-
+	- fvm use 1.22.6
+	- fvm doctor
+	- flutter config --android-sdk /home/anton/00__ME__________/20__DEV/10__TOOLS/Android/Sdk
+	- flutter doctor --android-licenses
 
 
 ========================================================================
