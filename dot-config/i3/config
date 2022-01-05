@@ -185,7 +185,8 @@ exec --no-startup-id synclient VertScrollDelta=-71
 exec --no-startup-id synclient HorizTwoFingerScroll=1
 exec --no-startup-id synclient HorizScrollDelta=-71
 
-
+# external monitor
+xrandr --output HDMI2 --mode 1920x1080 --same-as eDP1
 
 # ==================================================================== #
 # Window Rules 														   #
