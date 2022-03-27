@@ -1,7 +1,6 @@
 # ==================================================================== #
 # i3wm Basic Setting                                                   #
 # ==================================================================== #
-
 font pango:Noto Sans Regular 9
 set $mod Mod4
 
@@ -108,7 +107,6 @@ bindsym $mod+Shift+Tab focus left
 # ==================================================================== #
 # RUN APPS 															   #
 # ==================================================================== #
-
 # App shortcuts
 bindsym $mod+F1 exec mate-calc
 bindsym $mod+Return exec xfce4-terminal
@@ -116,6 +114,7 @@ bindsym $mod+w exec chromium
 bindsym $mod+e exec thunar
 bindsym Print exec "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+Print exec --no-startup-id flameshot gui
+bindsym $mod+F9 exec ~/.config/i3/scripts/display_menu.sh
 bindsym $mod+F12 exec ~/.config/i3/scripts/mydmenu_exit.sh
 bindsym $mod+F10 exec ~/.config/polybar/launch.sh
 bindsym $mod+shift+F10 exec "killall -q polybar"
@@ -146,16 +145,10 @@ bindsym $mod+Escape exec rofi -modi drun -show drun -display-drun "Apps : " -lin
                 -columns 2 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11"
                 
-# rofi bindings for window menu
-#bindsym $mod+Tab exec rofi -show window -display-window "Window : " -line-padding 4 \
-#                -lines 10 -padding 50 -hide-scrollbar \
-#                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11"
-
 
 # ==================================================================== #
 # Autostart Application 											   #
 # ==================================================================== #
-
 #get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
@@ -174,9 +167,6 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 # Desktop notifications
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
-# Polybar
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 # dunst
 exec --no-startup-id dunst
 
@@ -185,13 +175,10 @@ exec --no-startup-id synclient VertScrollDelta=-71
 exec --no-startup-id synclient HorizTwoFingerScroll=1
 exec --no-startup-id synclient HorizScrollDelta=-71
 
-# external monitor
-# xrandr --output HDMI2 --mode 1920x1080 --same-as eDP1
 
 # ==================================================================== #
 # Window Rules 														   #
 # ==================================================================== #
-
 # set floating (nontiling)for apps needing it
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
@@ -206,11 +193,9 @@ for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enabl
 for_window [class="Pamac-manager"] floating enable
 
 
-
 # ==================================================================== #
 # color settings for bar and windows                                   #
 # ==================================================================== #
- 
 # Define colors variables: 
 set $darkbluetrans	#08052be6
 set $darkblue		#08052b
@@ -233,33 +218,4 @@ client.focused_inactive	$darkblue	$polybarBg	$grey		$polybarBg		$polybarBg
 client.urgent		    $urgentred	$urgentred	$white		$polybarBg		$polybarBg
 
 hide_edge_borders smart
-
-
-# ==================================================================== #
-# Bar settings                                                         #
-# ==================================================================== #
-
-# Start i3bar to display a workspace bar 
-# (plus the system information i3status finds out, if available)
-
-#bar {
-#	font pango:Noto Sans Regular 9, FontAwesome 9
-#	status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#	position bottom 
-#	tray_output primary
-#	tray_padding 0
-#	strip_workspace_numbers yes
-#
-#	colors {
-#		separator          $purple
-#		background         $darkgrey
-#		statusline         $white
-#                          		border 		        bg		txt		indicator
-#		focused_workspace	$mediumgrey	   		$grey		$darkgrey	$purple
-#		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
-#		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
-#		urgent_workspace	$urgentred	    	$urgentred	$white		$purple 
-#	}
-#}
-
 
